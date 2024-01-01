@@ -1,6 +1,20 @@
 ## MauveWolf (AKA CSS Hell)
 
-This is my personal theme that I'm quite happy with. I built it from several different themes mixed with my own preferences.
+This is my personal theme that I'm quite happy with. I built it from several different themes mixed with my own preferences. 
+
+The main changes are:
+- Bookmark bar and tab bar hidden
+- [Catpuccin](https://github.com/catppuccin/firefox) style Mauve Mocha theme with some changes
+- Nav bar as part of header bar
+- FireFox tab dropdown box added to the left
+- Sidebery as vertical tabs without hiding (I like to see my tabs!)
+- Dimmed gray unloaded tabs
+- Light blue loaded tabs
+- Pink bold current tab
+- Custom border box for current tab
+- New unread tabs in italics
+- Updated and pretty Sidebery context menu
+- A bunch of changes to Sidebery sizing and behaviour (double click to rename tab, unload collapsed folders, save snapshot of tabs each day and so on..)
 
 ![image](images/screenshot-firefox1.png)
 
@@ -23,7 +37,9 @@ This is my personal theme that I'm quite happy with. I built it from several dif
 13. Paste my `sidebery.css` into the window on the right.
 14. Done!
 
-Let me know if this breaks but I should be aware since I use this regularly. Tested on macOS and Windows.
+*You may need to **Customise Toolbar** with a right click in FireFox to adjust positions of icons. Use the flexible spacers :)
+
+Let me know if this breaks but I should be aware since I use this regularly. Tested on macOS and Windows (soon). None of this CSS is clean and is full of hacks to get it working.
 
 New tab page is [Tabliss](https://tabliss.io/)
 
