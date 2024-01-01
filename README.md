@@ -2,7 +2,7 @@
 
 This is my personal theme that I'm quite happy with. I built it from several different themes mixed with my own preferences.
 
-![image](images/screenshot-firefox.png)
+![image](images/screenshot-firefox1.png)
 
 ![image](images/dropdown-menu.png)
 
@@ -24,3 +24,7 @@ This is my personal theme that I'm quite happy with. I built it from several dif
 14. Done!
 
 Let me know if this breaks but I should be aware since I use this regularly. Tested on macOS and Windows.
+
+
+
+![image](images/screenshot-firefox2.png)
