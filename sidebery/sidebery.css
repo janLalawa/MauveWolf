@@ -1,0 +1,362 @@
+/*Just the Sidebery themes on their own if you don't want to import all the options from it */
+#root.root {--tabs-activated-shadow: 0 1px 4px -1px rgba(0,0,0,0.282), inset 0 0 0 1px rgb(165, 92, 251), inset 4px 0 0 0 #f388ffff;}
+#root.root {--tabs-border-radius: 5px;}
+#root.root {--tabs-activated-fg: #f388ffff;}
+#root.root {--tabs-activated-bg: #2a2a41ff;}
+
+#root.root {--tabs-height: 28px;}
+
+
+
+
+.Tab .title {
+font-size: 14px;
+}
+
+
+/*--Bolds the active tab text--*/
+.Tab[data-active="true"] .title {
+  font-weight: bold;
+  font-size: 14px;}
+
+@media (prefers-color-scheme: light) {
+    #root {
+        /* Tab and PinnedTab height adjustment */
+        --tabs-height: 33px;
+        --tabs-pinned-height: var(--tabs-height);
+        /* Light Theme base settings */
+    }
+
+    #root .Tab {
+        --tabs-indent: 7px;
+    }
+
+    /* TABS */
+
+    .Tab .lvl-wrapper:after {
+        display: none;
+    }
+
+    .Tab {
+        margin: auto;
+        width: 94%;
+        border-radius: 3px;
+    }
+
+    .Tab .close>svg:hover {
+        /* Styling the tab close button */
+        border-radius: 3px;
+        background: var(--warn) !important;
+        opacity: 80%;
+    }
+
+    .Tab .title {
+        overflow: hidden !important;
+    }
+
+    /* PINNED TABS */
+
+    .PinnedDock {
+        background-color: var(--bg) !important;
+    }
+
+    .PinnedTab {
+        margin: 5px 0px 4px 6px;
+        border-radius: 3px;
+    }
+
+    /* NAV BAR */
+
+    .NavigationBar {
+        height: 41px !important;
+        padding: 4.5px 0px 0px 4.5px !important;
+        /*background-color: # !important;*/
+        margin-bottom: 5px;
+    }
+
+    .NavigationBar .panel-btn:hover {
+        border-radius: 3px !important;
+        background-color: var(--tabs-bg-hover) !important;
+    }
+
+    .NavigationBar .panel-btn[data-active="true"] {
+        border-radius: 3px !important;
+        background-color: var(--bg) !important;
+    }
+
+    .NavigationBar .panel-btn[data-active="true"]:hover {
+        border-radius: 3px !important;
+        background-color: var(--tabs-bg-hover) !important;
+    }
+
+    .NavigationBar .panel-btn>svg,
+    .NavigationBar .panel-btn>img {
+        fill: var(--panel-btn) !important;
+    }
+
+    /* SIDEBAR HACK PATCHES */
+
+    @media (max-width: 50px) {
+
+        /* Fix to tab tree identation when minimised */
+        #root:not(:hover) .Tab {
+            --tabs-indent: 0px;
+        }
+
+        .Tab[data-lvl]>div.lvl-wrapper {
+            right: -2px;
+        }
+
+        .Tab {
+            max-width: 34px;
+        }
+
+        .Tab .fav {
+            z-index: 1;
+        }
+
+        .Tab .audio {
+            z-index: 1;
+            margin-left: -12px;
+            height: 26px;
+        }
+
+        .Tab .title {
+            display: none;
+        }
+
+        .PinnedTab {
+            margin-left: 5px;
+        }
+
+        .NavigationBar .settings-btn {
+            display: none;
+        }
+    }
+
+    /* OPTIONAL */
+
+    /* Disable these two snippets below to make pinned tabs wrap when minimised */
+    /*.PinnedDock {
+	flex-wrap: nowrap !important;
+}
+
+.PinnedTab {
+	overflow: hidden !important;
+	min-width: var(--tabs-pinned-width) !important;
+}*/
+
+    /* Optional patch for better tab notifications on pinned tabs */
+
+    .PinnedTab[data-audible] .fav>img,
+    .PinnedTab[data-muted] .fav>img,
+    .PinnedTab[data-loading] .fav>img {
+        mask: none;
+    }
+
+    .PinnedTab .fav>img {
+        mask: none;
+    }
+
+    .PinnedTab[data-updated="true"] .fav>img {
+        mask: radial-gradient(circle at calc(100% - 2px) calc(100% - 2px), rgba(0, 0, 0, 0.141), rgba(0, 0, 0, 0.141) 4px, #000 5px, #000);
+    }
+
+    .PinnedTab .audio-badge {
+        top: 5px;
+    }
+
+    .PinnedTab .update-badge {
+        opacity: 0;
+    }
+
+    .PinnedTab[data-updated="true"] .update-badge {
+        opacity: 100;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    #root {
+        /* Tab and PinnedTab height adjustment */
+        --tabs-height: 33px;
+        --tabs-pinned-height: var(--tabs-height);
+
+        /* Dark Theme base settings */
+
+    }
+
+    #root .Tab {
+        --tabs-indent: 25px;
+    }
+
+    /* TABS */
+
+    .Tab .lvl-wrapper:after {
+        display: none;
+    }
+
+    .Tab {
+        margin: auto;
+        width: 94%;
+        border-radius: 3px;
+    }
+
+    .Tab .close>svg:hover {
+        /* Styling the tab close button */
+        border-radius: 3px;
+        background: var(--warn) !important;
+        opacity: 80%;
+    }
+
+    .Tab .title {
+        overflow: hidden !important;
+    }
+
+    /* PINNED TABS */
+
+    .PinnedDock {
+        background-color: var(--bg) !important;
+    }
+
+    .PinnedTab {
+        margin: 5px 0px 4px 6px;
+        border-radius: 3px;
+    }
+
+    /* NAV BAR */
+
+    .NavigationBar {
+        height: 41px !important;
+        padding: 4.5px 0px 0px 4.5px !important;
+        /*background-color: # !important;*/
+        margin-bottom: 5px;
+    }
+
+    .NavigationBar .panel-btn:hover {
+        border-radius: 3px !important;
+
+    }
+
+    .NavigationBar .panel-btn[data-active="true"] {
+        border-radius: 3px !important;
+
+    }
+
+    .NavigationBar .panel-btn[data-active="true"]:hover {
+        border-radius: 3px !important;
+
+    }
+
+    .NavigationBar .panel-btn>svg,
+    .NavigationBar .panel-btn>img {
+        fill: var(--panel-btn) !important;
+    }
+
+    /* SIDEBAR HACK PATCHES */
+
+    @media (max-width: 50px) {
+
+        /* Fix to tab tree identation when minimised */
+        #root:not(:hover) .Tab {
+            --tabs-indent: 0px;
+        }
+
+        .Tab[data-lvl]>div.lvl-wrapper {
+            right: -2px;
+        }
+
+        .Tab {
+            max-width: 34px;
+        }
+
+        .Tab .fav {
+            z-index: 1;
+        }
+
+        .Tab .audio {
+            z-index: 1;
+            margin-left: -12px;
+            height: 26px;
+        }
+
+        .Tab .title {
+            display: none;
+        }
+
+        .PinnedTab {
+            margin-left: 5px;
+        }
+
+        .NavigationBar .settings-btn {
+            display: none;
+        }
+    }
+
+    /* OPTIONAL */
+
+    /* Disable these two snippets below to make pinned tabs wrap when minimised */
+    /*.PinnedDock {
+        flex-wrap: nowrap !important;
+    }
+    
+    .PinnedTab {
+        overflow: hidden !important;
+        min-width: var(--tabs-pinned-width) !important;
+    }*/
+
+    /* Optional patch for better tab notifications on pinned tabs */
+
+    .PinnedTab[data-audible] .fav>img,
+    .PinnedTab[data-muted] .fav>img,
+    .PinnedTab[data-loading] .fav>img {
+        mask: none;
+    }
+
+    .PinnedTab .fav>img {
+        mask: none;
+    }
+
+    .PinnedTab[data-updated="true"] .fav>img {
+        mask: radial-gradient(circle at calc(100% - 2px) calc(100% - 2px), rgba(0, 0, 0, 0.141), rgba(0, 0, 0, 0.141) 4px, #000 5px, #000);
+    }
+
+    .PinnedTab .audio-badge {
+        top: 5px;
+    }
+
+    .PinnedTab .update-badge {
+        opacity: 0;
+    }
+
+    .PinnedTab[data-updated="true"] .update-badge {
+        opacity: 100;
+    }
+}
+
+.Tab .fav {
+  order: 0;
+}
+
+
+.Tab .title {
+  padding-left: 5px;
+}
+
+.Tab .close {
+  right: px;
+}
+
+.Tab[data-discarded="true"] .body {
+    opacity: 0.37;
+}
+.Tab[data-discarded="true"] > .body > .fav,
+.Tab[data-discarded="true"] > .body > .t-box {
+    opacity: 1;
+}
+
+.Tab[data-discarded="true"] .title {
+  color: rgba(255, 255, 255, 0.55);}
+
+.Tab[data-unread="true"] .title {
+  font-style: italic;}
