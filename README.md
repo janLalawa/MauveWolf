@@ -25,6 +25,8 @@ This is my personal theme that I'm quite happy with. I built it from several dif
 
 Let me know if this breaks but I should be aware since I use this regularly. Tested on macOS and Windows.
 
+New tab page is [Tabliss](https://tabliss.io/)
+
 
 
 ![image](images/screenshot-firefox2.png)
