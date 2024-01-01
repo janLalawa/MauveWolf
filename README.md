@@ -1,4 +1,4 @@
-# MauveWolf (AKA CSS Hell)
+## MauveWolf (AKA CSS Hell)
 
 This is my personal theme that I'm quite happy with. I built it from several different themes mixed with my own preferences. 
 
@@ -7,7 +7,7 @@ This is my personal theme that I'm quite happy with. I built it from several dif
 
 ![image](images/dropdown-menu.png)
 
-## Main Changes
+### Main Changes
 - Bookmark bar and tab bar hidden
 - [Catpuccin](https://github.com/catppuccin/firefox) style Mauve Mocha theme with some changes
 - Nav bar as part of header bar
@@ -22,7 +22,7 @@ This is my personal theme that I'm quite happy with. I built it from several dif
 - A bunch of changes to Sidebery sizing and behaviour (double click to rename tab, unload collapsed folders, save snapshot of tabs each day and so on..)
 
 
-## Installation
+### Installation
 1. Go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to "True" to enable CSS customisation.
 2. Set `svg.context-properties.content.enabled` to true to allow Sidebery to use FireFox themes.
 3. Install [Sidebery](https://addons.mozilla.org/en-GB/firefox/addon/sidebery/)/
