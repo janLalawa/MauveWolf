@@ -22,6 +22,12 @@ This is my personal theme that I'm quite happy with. I built it from several dif
 - A bunch of changes to Sidebery sizing and behaviour (double click to rename tab, unload collapsed folders, save snapshot of tabs each day and so on..)
 
 
+### Windows Users
+
+Follow the steps below, but instead of `userChrome.css`, use `userChrome - WindowsTempFix.css` and rename it to just `userChrome.css` once you've copied it into the `chrome` folder. This is to make space for the buttonbar in the top right and to stop it overlapping.
+- BUG: When the window is inactive in Windows, the buttonbar will disappear. Can't inspect the CSS properly to see if this is opacity/colou related, but it doesn't seem to be altering the position or size. **If you have a fix, throw in a pull request!**
+
+
 ### Installation
 1. Go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to "True" to enable CSS customisation.
 2. Set `svg.context-properties.content.enabled` to true to allow Sidebery to use FireFox themes.
@@ -38,9 +44,9 @@ This is my personal theme that I'm quite happy with. I built it from several dif
 13. Paste my `sidebery.css` into the window on the right.
 14. Done!
 
-*You may need to **Customise Toolbar** with a right click in FireFox to adjust positions of icons. Use the flexible spacers :)
+*You may need to **Customise Toolbar** with a right click in FireFox to adjust positions of icons. Use the flexible spacers* :)
 
-Let me know if this breaks but I should be aware since I use this regularly. Tested on macOS and Windows (soon). None of this CSS is clean and is full of hacks to get it working.
+Let me know if this breaks but I should be aware since I use this regularly. Tested on **macOS** and **Windows** (with a small bug). None of this CSS is clean and is full of hacks to get it working.
 
 New tab page is [Tabliss](https://tabliss.io/)
 
