@@ -39,17 +39,15 @@ Follow the steps below, but instead of `userChrome.css`, use `userChrome - Windo
 8. Enter the `chrome` folder.
 9. Drop the `userChrome.css` file in there or alternatively create your own file and paste the contents.
 10. Restart FireFox and open Sidebery config/
-11. In the *Help* section, click the **Import addon data** button and import `sidebery-data.json`
+11. In the *Help* section, click the **Import addon data** button and import `sidebery-data.json` *(NOTE: This will update your Sidebery tab panels to my list and will take your tabs out of their current panels)*
 12. If you just want the styles instead and don't care about the dropdown and other config, head to the *Styles Editor* section
 13. Paste my `sidebery.css` into the window on the right.
 14. Done!
-
-*You may need to **Customise Toolbar** with a right click in FireFox to adjust positions of icons. Use the flexible spacers* :)
+- *You may need to **Customise Toolbar** with a right click in FireFox to adjust positions of icons. Use the flexible spacers* :)
 
 Let me know if this breaks but I should be aware since I use this regularly. Tested on **macOS** and **Windows** (with a small bug). None of this CSS is clean and is full of hacks to get it working.
 
 New tab page is [Tabliss](https://tabliss.io/)
-
 
 
 ![image](images/screenshot-firefox2.png)
