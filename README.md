@@ -1,6 +1,6 @@
-## MauveWolf (AKA CSS Hell)
+## MauveWolf, a Firefox Sidebery Theme (AKA CSS Hell)
 
-This is my personal theme that I'm quite happy with. I built it from several different themes mixed with my own preferences. 
+This is my personal Firefox theme that I'm quite happy with. I built it from several different themes mixed with my own preferences. 
 
 
 ![image](images/screenshot-firefox1.png)
