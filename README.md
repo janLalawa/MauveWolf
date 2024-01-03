@@ -51,3 +51,6 @@ New tab page is [Tabliss](https://tabliss.io/)
 
 
 ![image](images/screenshot-firefox2.png)
+
+#### Windows Version
+![image](images/windows-version.png)
