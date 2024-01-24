@@ -26,7 +26,7 @@ I've had more interest than expected in my theme. I'll try and make some time so
 ### Windows Users
 
 Follow the steps below, but instead of `userChrome.css`, use `userChrome - WindowsTempFix.css` and rename it to just `userChrome.css` once you've copied it into the `chrome` folder. This is to make space for the buttonbar in the top right and to stop it overlapping.
-- BUG: When the window is inactive in Windows, the buttonbar will disappear. Can't inspect the CSS properly to see if this is opacity/colou related, but it doesn't seem to be altering the position or size. **If you have a fix, throw in a pull request!**
+I have now resolved the bug with missing icons on the buttonbar. Please grab the latest windows userChrome until I clean this up and release a proper version.
 
 ### Updating Accent Colours
 
@@ -53,7 +53,7 @@ I've had two requests now around updating specific accent colours. The three pla
 14. Done!
 - *You may need to **Customise Toolbar** with a right click in Firefox to adjust positions of icons. Use the flexible spacers* :)
 
-Let me know if this breaks but I should be aware since I use this regularly. Tested on **macOS** and **Windows** (with a small bug). None of this CSS is clean and is full of hacks to get it working.
+Let me know if this breaks but I should be aware since I use this regularly. Tested on **macOS** and **Windows**. None of this CSS is clean and is full of hacks to get it working.
 
 New tab page is [Tabliss](https://tabliss.io/)
 
@@ -62,3 +62,4 @@ New tab page is [Tabliss](https://tabliss.io/)
 
 #### Windows Version
 ![image](images/windows-version.png)
+

@@ -19,10 +19,6 @@ Hopefully this theme is robust. I am happy with it at least
     opacity: 1 !important;
 }
 
-#nav-bar {
-  padding-right: 160px !important;
-}
-
 #TabsToolbar-customization-target > #alltabs-button {
   order: -1;
   margin-bottom: 0px;
@@ -50,7 +46,7 @@ Hopefully this theme is robust. I am happy with it at least
     margin-top: -40px;
   }
   #main-window[titlepreface*="🦊 "][tabsintitlebar="true"] #nav-bar {
-    margin-right: 90px;
+    margin-right: 160px;
   }
   #main-window[titlepreface*="🦊 "] #titlebar-spacer {
     background-color: var(--chrome-secondary-background-color);
