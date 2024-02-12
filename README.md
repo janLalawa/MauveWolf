@@ -53,6 +53,8 @@ I've had two requests now around updating specific accent colours. The three pla
 14. Done!
 - *You may need to **Customise Toolbar** with a right click in Firefox to adjust positions of icons. Use the flexible spacers* :)
 
+- Small recommendation until I can update this: Change the "Create sub-tree on opening link in new tab" to **off**. In practice this makes things much easier to manage by only creating sub-trees when you actually want them (by dragging things around).
+
 Let me know if this breaks but I should be aware since I use this regularly. Tested on **macOS** and **Windows**. None of this CSS is clean and is full of hacks to get it working.
 
 New tab page is [Tabliss](https://tabliss.io/)
