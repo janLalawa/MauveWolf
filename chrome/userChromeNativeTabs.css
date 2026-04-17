@@ -1,0 +1,145 @@
+/*
+  userChrome.css — Firefox Native Vertical Tabs
+  (Sidebery rules removed; Firefox 135+ handles vertical tabs natively)
+*/
+
+/* === TITLEBAR / WINDOW CONTROLS === */
+
+#TabsToolbar > .titlebar-buttonbox-container {
+  -moz-box-ordinal-group: 0;
+  padding-right: 5px;
+}
+
+#TabsToolbar-customization-target {
+  display: flex;
+  flex-direction: row;
+}
+
+#TabsToolbar-customization-target > #alltabs-button {
+  order: -1;
+  margin-bottom: 0px;
+}
+
+#tabs-newtab-button {
+  display: none;
+}
+
+.titlebar-spacer[type="pre-tabs"] {
+  width: 1px !important;
+}
+
+.titlebar-button {
+  height: 40px;
+}
+
+/* === SIDEBAR STYLING === */
+
+#sidebar,
+#sidebar-header {
+  background-color: var(--toolbar-bgcolor) !important;
+  border-inline: 1px solid var(--chrome-content-separator-color);
+  border-inline-width: 0px 1px;
+}
+
+/* === ACTIVE TAB — PINK & BOLD TEXT === */
+.tab-content:is([selected], [multiselected]) {
+  color: #ECA0F9 !important;
+  font-weight: bold !important;
+}
+
+/* === COMPACT VERTICAL TABS === */
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab {
+  padding-block: 0 0 !important;
+}
+#tabbrowser-tabs[orient="vertical"] .tab-content {
+  padding-block: 1px !important;
+  font-size: 13px !important;
+}
+
+/* === AUTO-HIDE BOOKMARKS TOOLBAR ===
+   Source: https://github.com/MrOtherGuy/firefox-csshacks (MPL 2.0)
+*/
+
+#PersonalToolbar {
+  --uc-bm-height: 20px;
+  --uc-bm-padding: 7px;
+  --uc-autohide-toolbar-delay: 600ms;
+  --uc-autohide-toolbar-focus-rotation: 0deg;
+  --uc-autohide-toolbar-hover-rotation: 0deg;
+}
+
+:root[uidensity="compact"] #PersonalToolbar { --uc-bm-padding: 1px; }
+:root[uidensity="touch"]   #PersonalToolbar { --uc-bm-padding: 7px; }
+
+#PersonalToolbar:not([customizing]) {
+  position: relative;
+  margin-bottom: calc(0px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: transform 135ms linear var(--uc-autohide-toolbar-delay) !important;
+  z-index: 1;
+  background-color: transparent !important;
+  background-repeat: no-repeat, no-repeat, var(--lwt-background-tiling);
+  --uc-bg-y: calc(
+          -2 * (var(--tab-block-margin) + var(--toolbarbutton-inner-padding) + var(--toolbarbutton-outer-padding))
+          - var(--tab-min-height) - 16px - var(--bookmark-block-padding)
+  );
+  background-position: top left, top left, var(--lwt-background-alignment, top left);
+  background-position-y: top, top, var(--uc-bg-y), var(--uc-bg-y), var(--uc-bg-y);
+  background-image:
+          var(--toolbar-bgimage),
+          linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)),
+          var(--lwt-header-image, var(--lwt-additional-images)) !important;
+}
+
+#PlacesToolbarItems > .bookmark-item,
+#OtherBookmarks,
+#PersonalToolbar > #import-button {
+  padding-block: var(--uc-bm-padding) !important;
+}
+
+#nav-bar:focus-within + #PersonalToolbar {
+  transition-delay: 100ms !important;
+  transform: rotateX(var(--uc-autohide-toolbar-focus-rotation, 0));
+}
+
+#navigator-toolbox:hover > #PersonalToolbar {
+  transition-delay: 100ms !important;
+  transform: rotateX(var(--uc-autohide-toolbar-hover-rotation, 0));
+}
+
+#navigator-toolbox:hover > #nav-bar:focus-within + #PersonalToolbar {
+  transform: rotateX(0);
+}
+
+/* === NEW TAB ANIMATION === */
+@keyframes tab-appear {
+  from {
+    opacity: 0;
+    transform: scaleY(0.6) translateX(-6px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1) translateX(0);
+    max-height: 48px;
+  }
+}
+
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab {
+  transform-origin: top center;
+  overflow: hidden;
+}
+
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[fadein] {
+  animation: tab-appear 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* === UNLOADED / DISCARDED TAB STYLING === */
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab .tab-content {
+  color: #7F8AB8;
+}
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[pending] .tab-content {
+  color: #3D3E45;
+  font-style: italic;
+}

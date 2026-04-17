@@ -1,14 +1,19 @@
-## MauveWolf, a Firefox Sidebery Theme (AKA CSS Hell)
+## MauveWolf, a Firefox Theme (Supports Sidebery and Native Vertical Tabs)
 
 This is my personal Firefox theme that I'm quite happy with. I built it from several different themes mixed with my own preferences.
-I've had more interest than expected in my theme. I'll try and make some time soon to clean it up and publish an actual release.
 
 
-![image](images/screenshot-firefox1.png)
+## Latest Changes
+- Updated to work without the need for Sidebery.
+Since Firefox 135 we now have vertical tabs natively.You can grab these 
+changes from the `userChromeNativeTabs.css` file. Just be sure to rename when dropping into your `chrome` folder 
+to `userChrome.css` and you should be good to go. 
+This change means that you can now use the natively supported expand on hover :)
 
-![image](images/dropdown-menu.png)
+- Added a small animation to when you add a new tab. It does a tiny bounce. If you don't like it, remove this from
+near the end of the native tabs userchrome, it should be clearly marked with comments.
 
-### Main Changes
+## What does this theme add?
 - Bookmark bar and tab bar hidden
 - [Catpuccin](https://github.com/catppuccin/firefox) style Mauve Mocha theme with some changes
 - Nav bar as part of header bar
@@ -20,23 +25,24 @@ I've had more interest than expected in my theme. I'll try and make some time so
 - Custom border box for current tab
 - New unread tabs in italics
 - Updated and pretty Sidebery context menu
-- A bunch of changes to Sidebery sizing and behaviour (double click to rename tab, unload collapsed folders, save snapshot of tabs each day and so on..)
+- A bunch of changes to Sidebery sizing and behaviour (double click to rename tab, unload collapsed folders, save snapshot of tabs each day and so on...)
 
+![image](images/nativeVerticalTabs.png)
 
-### Windows Users
+## Windows Users
+Follow the steps below, but instead of `userChrome.css`, use `userChrome - WindowsTempFix.css` and rename it to just 
+`userChrome.css` once you've copied it into the `chrome` folder. This is to make space for the buttonbar in the top right 
+and to stop it overlapping.I have now resolved the bug with missing icons on the buttonbar. 
+Please grab the latest windows userChrome until I clean this up and release a proper version.
 
-Follow the steps below, but instead of `userChrome.css`, use `userChrome - WindowsTempFix.css` and rename it to just `userChrome.css` once you've copied it into the `chrome` folder. This is to make space for the buttonbar in the top right and to stop it overlapping.
-I have now resolved the bug with missing icons on the buttonbar. Please grab the latest windows userChrome until I clean this up and release a proper version.
-
-### Updating Accent Colours
-
+## Updating Accent Colours
 I've had two requests now around updating specific accent colours. The three places you can make such changes are:
 - Your **userChrome.css** file (to directly theme the browser manually if you know what to target). [See this guide for help with that](https://www.reddit.com/r/FirefoxCSS/comments/73dvty/tutorial_how_to_create_and_livedebug_userchromecss/)
 - The **sidebery CSS** where you can also use a GUI to edit (For changing tab highlights etc.)
 - In [Firefox Color](https://color.firefox.com/)
 
-
-### Installation
+## Installation
+### Sidebery Version Installation
 1. Go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to "True" to enable CSS customisation.
 2. Set `svg.context-properties.content.enabled` to true to allow Sidebery to use FireFox themes.
 3. Install [Sidebery](https://addons.mozilla.org/en-GB/firefox/addon/sidebery/)
@@ -55,13 +61,19 @@ I've had two requests now around updating specific accent colours. The three pla
 
 - Small recommendation until I can update this: Change the "Create sub-tree on opening link in new tab" to **off**. In practice this makes things much easier to manage by only creating sub-trees when you actually want them (by dragging things around).
 
-Let me know if this breaks but I should be aware since I use this regularly. Tested on **macOS** and **Windows**. None of this CSS is clean and is full of hacks to get it working.
-
 New tab page is [Tabliss](https://tabliss.io/)
 
+### Native Vertical Tabs Version Installation
+1. Follow the same steps as above but instead of using the `userChrome.css` file, use the `userChromeNativeTabs.css`
+file and rename it to `userChrome.css`
+2. Right click Firefox's tab bar and select "Use Vertical Tabs" (This is a new feature in Firefox 135)
 
+---
+
+## More Screenshots
+### Sidebery Version
+![image](images/screenshot-firefox1.png)
+![image](images/dropdown-menu.png)
 ![image](images/screenshot-firefox2.png)
-
-#### Windows Version
 ![image](images/windows-version.png)
 
